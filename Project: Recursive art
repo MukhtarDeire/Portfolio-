@@ -1,0 +1,19 @@
+var drawShape = function(x, y, radius) {
+    
+    if (radius < 2550) {
+           println(radius);
+           fill(227/radius, random(0, 255), 255/radius); 
+    }
+
+
+    ellipse(x, y, radius, radius);
+    
+    var newRadius = radius/2;
+    
+    if (newRadius >= 2) {
+        
+        drawShape(x, y, newRadius);
+    }
+};
+
+drawShape(width/2, height/2, 380);
